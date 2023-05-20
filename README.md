@@ -5,7 +5,6 @@ More concretely it contains a so-called Solution (a form of the project) for the
 
 C64Studio:
   https://github.com/GeorgRottensteiner/C64Studio
-  
   or https://www.georg-rottensteiner.de/de/c64.html (german site)
   
 ACME:
