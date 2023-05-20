@@ -8,7 +8,7 @@ C64Studio:
 &emsp;https://www.georg-rottensteiner.de/de/c64.html (german site)
   
 ACME:  
-&emsp;https://sourceforge.net/projects/acme-crossass/,   
+&emsp;https://sourceforge.net/projects/acme-crossass/  
 &emsp;https://www.c64-wiki.de/wiki/ACME (german site but the translation with google translate is good enough)  
 &emsp;https://www-c64--wiki-de.translate.goog/wiki/ACME?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp (english translation)
   
