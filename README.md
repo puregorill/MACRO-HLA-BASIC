@@ -1,4 +1,4 @@
 # MACRO HLA BASIC
 
 
-http://wilsonminesco.com/StructureMacros/
+Heavily inspired by the following site: http://wilsonminesco.com/StructureMacros/
