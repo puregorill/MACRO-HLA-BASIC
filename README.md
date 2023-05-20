@@ -4,7 +4,7 @@ The files are a macro collection for the Commodore 64 (NMOS 6502/6510).
 More concretely it contains a so-called Solution (a form of the project) for the C64Studio, which has an ACME Cross Assembler-like syntax. The macros can of course also be used without the C64Studio (with the Cross Assembler ACME, whose syntax the files just have).
 
 C64Studio:    
-&emsp;https://github.com/GeorgRottensteiner/C64Studio (german speaking author, actual software is in english)
+&emsp;https://github.com/GeorgRottensteiner/C64Studio (german speaking author, actual software is in english)  
 &emsp;https://www.georg-rottensteiner.de/de/c64.html (german site)
   
 ACME:  
