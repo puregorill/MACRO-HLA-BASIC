@@ -10,7 +10,7 @@ The special feature of this macro collection is that it contains structure macro
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
 &emsp;http://wilsonminesco.com/StructureMacros/
 <br><br>
-## For more information please read the github wiki.
+## For more information please read the github wiki:
 &emsp;https://github.com/puregorill/MACRO-HLA-BASIC/wiki
 <br><br>
 ## Wichtige Links:
