@@ -5,8 +5,14 @@ More concretely it contains a so-called Solution (a form of the project) for the
 
 C64Studio:
   https://github.com/GeorgRottensteiner/C64Studio
+  
   or https://www.georg-rottensteiner.de/de/c64.html (german site)
+  
 ACME:
   https://sourceforge.net/projects/acme-crossass/
+  
   https://www.c64-wiki.de/wiki/ACME (german site but the translation with google translate is good enough) 
-Heavily inspired by the following site: http://wilsonminesco.com/StructureMacros/
+  
+The whole project and also parts of the code are heavily influenced and inspired by the following project:
+
+  http://wilsonminesco.com/StructureMacros/
