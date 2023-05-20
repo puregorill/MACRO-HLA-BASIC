@@ -13,7 +13,7 @@ The whole project and also parts of the code are heavily influenced and inspired
 ## For more information please read the github wiki:
 &emsp;https://github.com/puregorill/MACRO-HLA-BASIC/wiki
 <br><br>
-## Wichtige Links:
+## Important Links:
 
 C64Studio:    
 &emsp;https://github.com/GeorgRottensteiner/C64Studio (german speaking author, actual software is in english)  
