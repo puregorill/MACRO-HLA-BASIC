@@ -7,6 +7,10 @@ More concretely it contains a so-called "Solution" for the C64Studio, which has 
 
 The special feature of this macro collection is that it contains structure macros such as **IF-ELSE-ENDIF** or **REPEAT-UNTIL**.  
 
+HLA means high level assembly. You can mix the HLA BASIC macros with mnemonics.  
+But it is also possible - within limits - to program only with the HLA BASIC macros like in BASIC. It is a bit more inefficient, but of course much much faster than C64 BASIC.   
+However, this comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.
+
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
 &emsp;http://wilsonminesco.com/StructureMacros/
 <br><br>
