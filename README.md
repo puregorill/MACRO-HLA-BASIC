@@ -2,14 +2,14 @@
 
 ## What is it?
 
-MACRO HLA BASIC is a macro collection for the Commodore 64 (NMOS 6502/6510).
-More concretely it contains a so-called "Solution" for the C64Studio, which has an ACME Cross Assembler-like syntax. The macros can of course also be used without the C64Studio (with the Cross Assembler ACME, whose syntax the files just have).
+MACRO HLA BASIC is a macro collection for the Commodore 64 (NMOS 6502/6510).    
+More concretely it contains a so-called "Solution" for the C64Studio, which has an ACME Cross Assembler-like syntax. The macros can of course also be used without the C64Studio (with the Cross Assembler ACME, whose syntax the files just have).  
 
 The special feature of this macro collection is that it contains structure macros such as **IF-ELSE-ENDIF** or **REPEAT-UNTIL**.  
 
-HLA means high level assembly. You can mix the HLA BASIC macros with mnemonics.  
-But it is also possible - within limits - to program only with the HLA BASIC macros like in BASIC. It is a bit more inefficient, but of course much much faster than C64 BASIC.   
-However, this comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.
+HLA means high level assembly. You can mix the HLA BASIC macros with 6502 assembly mnemonics.  
+
+But it is also possible - within limits - to program only with the HLA BASIC macros like in BASIC. It is a bit more inefficient, but of course much much faster than C64 BASIC. So if you know almost nothing about machine language, you can program MACRO HLA BASIC as if it were a kind of Tiny Basic (a limited and therefore somewhat cumbersome Basic that is very fast). However, with parts of machine language you get much more out of the macro collection and this comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.
 
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
 &emsp;http://wilsonminesco.com/StructureMacros/  
@@ -28,6 +28,4 @@ C64Studio:
   
 ACME:  
 &emsp;https://sourceforge.net/projects/acme-crossass/  
-&emsp;https://www.c64-wiki.de/wiki/ACME (german site but the [english translation with google](https://www-c64--wiki-de.translate.goog/wiki/ACME?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp) is good enough)  
-  
-
+&emsp;https://www.c64-wiki.de/wiki/ACME (german site but the [english translation with google](https://www-c64--wiki-de.translate.goog/wiki/ACME?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=de&_x_tr_pto=wapp) is good enough)
