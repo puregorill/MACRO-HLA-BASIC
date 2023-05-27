@@ -13,7 +13,8 @@ However, this comes with the disadvantage that the code is much longer (and some
 
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
 &emsp;http://wilsonminesco.com/StructureMacros/  
-I was also very inspired by the language "QUICK" for the Atari 8-bit series:
+
+I was also very inspired by the language "QUICK" for the Atari 8-bit series:  
 &emsp;https://atariwiki.org/wiki/Wiki.jsp?page=Quick
 
 <br><br>
