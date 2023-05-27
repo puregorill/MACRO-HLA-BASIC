@@ -16,7 +16,6 @@ The whole project and also parts of the code are heavily influenced and inspired
 
 I was also very inspired by the language "QUICK" for the Atari 8-bit series:  
 &emsp;https://atariwiki.org/wiki/Wiki.jsp?page=Quick
-
 <br><br>
 ## For more information please read the github wiki:
 &emsp;https://github.com/puregorill/MACRO-HLA-BASIC/wiki
