@@ -12,7 +12,7 @@ But it is also possible - within limits - to program only with the HLA BASIC mac
 However, this comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.
 
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
-&emsp;http://wilsonminesco.com/StructureMacros/
+&emsp;http://wilsonminesco.com/StructureMacros/  
 I was also very inspired by the language "QUICK" for the Atari 8-bit series:
 &emsp;https://atariwiki.org/wiki/Wiki.jsp?page=Quick
 
