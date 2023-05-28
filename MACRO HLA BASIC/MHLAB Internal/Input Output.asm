@@ -6,7 +6,7 @@
 ; PRINT, SCREEN OUTPUT, SCREEN CONTROL
 ;*********************************************************************
 
-!macro PRINT string_addr_mode, string_address {
+!macro PRINTS string_addr_mode, string_address {
   !if string_addr_mode=ABSS {
     lda #<string_address
     ldy #>string_address
@@ -24,12 +24,12 @@
   }
   jsr STROUT0
 }
-!macro PRINTABSS string_address {
+!macro PRINT string_address {
   lda #<string_address
   ldy #>string_address
   jsr STROUT0
 }
-!macro SCNCLR {
+!macro CLEAR_SCREEN {
   jsr _C_L_R_S_C_R_
 }
 !macro PRINTCHR addr_mode, operand {

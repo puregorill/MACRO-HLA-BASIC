@@ -17,10 +17,6 @@ INDS=-8    ; -"-
 INDXS=-9   ; -"-
 INDYS=-10  ; -"-
 
-AREG=-20
-XREG=-21
-YREG=-22
-
 ; IMM16 must stay the first of the 16-bit entries
 ; for example CMP16 <- take a look there why!
 IMM16=-50
@@ -29,6 +25,13 @@ ABSX16=-52
 ABSY16=-53
 ZPXIND16=-54
 ZPINDY16=-55
+
+
+
+AREG=-2000
+XREG=-2001
+YREG=-2002
+
 
 NONE=-9999
 
