@@ -618,22 +618,22 @@
 ; NEXT_UNTIL_VAR16
 ;*********************************************************************
 
-!macro NEXT_UNTIL_VAR16_DOWNTO_ZERO loop_addr_mode, loop_operand {
-  +DEC16 loop_addr_mode, loop_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+!macro NEXT_UNTIL_VAR16_DOWNTO_ZERO loopvar_addr_mode, loopvar_operand {
+  +DEC16 loopvar_addr_mode, loopvar_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
-!macro NEXT_UNTIL_VAR16_DOWNTO_ZERO_STEP loop_addr_mode, loop_operand, step_addr_mode, step_operand {
+!macro NEXT_UNTIL_VAR16_DOWNTO_ZERO_STEP loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand {
   +SUB16 loopvar_addr_mode, loopvar_operand, loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
 
-!macro NEXT_UNTIL_VAR16_UPTO_ZERO loop_addr_mode, loop_operand {
-  +INC16 loop_addr_mode, loop_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+!macro NEXT_UNTIL_VAR16_UPTO_ZERO loopvar_addr_mode, loopvar_operand {
+  +INC16 loopvar_addr_mode, loopvar_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
-!macro NEXT_UNTIL_VAR16_UPTO_ZERO_STEP loop_addr_mode, loop_operand, step_addr_mode, step_operand {
+!macro NEXT_UNTIL_VAR16_UPTO_ZERO_STEP loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand {
   +ADD16 loopvar_addr_mode, loopvar_operand, loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
 
 !macro NEXT_UNTIL_VAR16_DOWNTO loopvar_addr_mode, loopvar_operand, condition, end_addr_mode, end_operand {
@@ -656,22 +656,22 @@
 
 ; -----------------------------
 
-!macro NEXTFAR_UNTIL_VAR16_DOWNTO_ZERO loop_addr_mode, loop_operand {
-  +DEC16 loop_addr_mode, loop_operand
-  +UNTILFAR_VAR16_IS_ZERO loop_addr_mode, loop_operand
+!macro NEXTFAR_UNTIL_VAR16_DOWNTO_ZERO loopvar_addr_mode, loopvar_operand {
+  +DEC16 loopvar_addr_mode, loopvar_operand
+  +UNTILFAR_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
-!macro NEXTFAR_UNTIL_VAR16_DOWNTO_ZERO_STEP loop_addr_mode, loop_operand, step_addr_mode, step_operand {
+!macro NEXTFAR_UNTIL_VAR16_DOWNTO_ZERO_STEP loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand {
   +SUB16 loopvar_addr_mode, loopvar_operand, loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
 
-!macro NEXTFAR_UNTIL_VAR16_UPTO_ZERO loop_addr_mode, loop_operand {
-  +INC16 loop_addr_mode, loop_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+!macro NEXTFAR_UNTIL_VAR16_UPTO_ZERO loopvar_addr_mode, loopvar_operand {
+  +INC16 loopvar_addr_mode, loopvar_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
-!macro NEXTFAR_UNTIL_VAR16_UPTO_ZERO_STEP loop_addr_mode, loop_operand, step_addr_mode, step_operand {
+!macro NEXTFAR_UNTIL_VAR16_UPTO_ZERO_STEP loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand {
   +ADD16 loopvar_addr_mode, loopvar_operand, loopvar_addr_mode, loopvar_operand, step_addr_mode, step_operand
-  +UNTIL_VAR16_IS_ZERO loop_addr_mode, loop_operand
+  +UNTIL_VAR16_IS_ZERO loopvar_addr_mode, loopvar_operand
 }
 
 !macro NEXTFAR_UNTIL_VAR16_DOWNTO loopvar_addr_mode, loopvar_operand, condition, end_addr_mode, end_operand {
