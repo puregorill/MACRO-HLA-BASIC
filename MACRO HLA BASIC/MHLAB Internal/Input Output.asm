@@ -96,9 +96,10 @@
 }
 
 !macro LOCATE addr_mode_xpos, xpos, addr_mode_ypos, ypos {
+
   ; yes, it is swapped x=ypos and y=xpos
 
-  ; this needs more work!
+  ; this needs more work! BROKEN !!!!
 
   !if addr_mode_xpos=IMM8 {
     ldx #ypos

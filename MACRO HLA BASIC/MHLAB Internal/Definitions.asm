@@ -83,7 +83,7 @@ COLOR_Light_Grey = 155
 
 CTRL_Return = 13
 CTRL_LoUpCharSet = 14
-CTRL_UpGfxUpCharSet = 142
+CTRL_UpGfxCharSet = 142
 CTRL_Home = 19
 CTRL_Del = 20
 
