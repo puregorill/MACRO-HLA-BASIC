@@ -16,9 +16,6 @@
   } else if string_addr_mode=INDXS {
     lda string_address,x
     ldy string_address+1,x
-  } else if string_addr_mode=INDYS {
-    lda string_address,y
-    ldy string_address+1,y
   } else {
     !error "**** ERROR: NOT SUPPORTED STRING ADDRESSING MODE IN 'PRINT' ****"
   }

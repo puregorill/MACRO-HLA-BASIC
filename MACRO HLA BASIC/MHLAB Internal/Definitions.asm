@@ -26,14 +26,11 @@ ABSY16=-53
 ZPXIND16=-54
 ZPINDY16=-55
 
+AREG=-97
+XREG=-98
+YREG=-99
 
-
-AREG=-2000
-XREG=-2001
-YREG=-2002
-
-
-NONE=-9999
+NONE=-100 ; Do I need this?
 
 ;*********************************************************************
 ; Comparision Constants
@@ -59,6 +56,49 @@ GETIN=$FFE4
 _C_L_R_S_C_R_=$E544
 _S_E_T_C_U_R_=$FFF0
 
+;*********************************************************************
+; C64 COLOR CONTROL CODES
+;*********************************************************************
+
+COLOR_Black = 144
+COLOR_White = 5
+COLOR_Red = 28
+COLOR_Cyan = 159
+COLOR_Purple = 156
+COLOR_Green = 30
+COLOR_Blue = 31
+COLOR_Yellow = 158
+COLOR_Orange = 129
+COLOR_Brown = 149
+COLOR_Light_Red = 150
+COLOR_Dark_Grey = 151
+COLOR_Grey = 152
+COLOR_Light_Green = 153
+COLOR_Light_Blue = 154
+COLOR_Light_Grey = 155
+
+;*********************************************************************
+; C64 OTHER CONTROL CODES
+;*********************************************************************
+
+CTRL_Return = 13
+CTRL_LoUpCharSet = 14
+CTRL_UpGfxUpCharSet = 142
+CTRL_Home = 19
+CTRL_Del = 20
+
+CTRL_Space = 32
+
+CTRL_RvsOn = 18
+CTRL_RvsOff = 146
+
+CTRL_CurDown = 17
+CTRL_CurUp = 145
+CTRL_CurLeft = 157
+CTRL_CurRight = 29
+
+CTRL_ClearScreen = 147
+CTRL_ShiftClrHome = CTRL_ClearScreen
 
 
 

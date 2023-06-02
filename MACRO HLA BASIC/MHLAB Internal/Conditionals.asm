@@ -68,7 +68,7 @@
 !macro IF_FLAG_ZERO_CLEAR {
   beq *
   +_P_U_S_H_I_F_ *,0,0
-  }
+}
 !macro IF_FLAG_CARRY_SET {
   bcc *
   +_P_U_S_H_I_F_ *,0,0
@@ -466,6 +466,20 @@
   !end
 }
 
+;*********************************************************************
+; OR_TRUE, ENDOR
+;*********************************************************************
+
+; BROKEN --- DOES NOT WORK
+
+!macro ENDORS number {
+  jmp ._l_
+  +ENDIFS number
+  jmp $0000
+  +  +_P_U_S_H_I_F_ *,0,1
+  ._l_
+}
+
 ;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ; SELECT CASE
 ;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -542,22 +556,22 @@
   +_L_D_A_ addr_mode, operand
   asl
   tax
-  
+
   ; --- Method: self modifying code ---
-  
+
   lda jump_table_address,x
   sta ._j_+1
   lda jump_table_address+1,x
   sta ._j_+2
   ._j_
   jsr $0000
-    
+
 }
 !macro ON_GOSUB_LH_VAR8 addr_mode, operand, jump_table_address_lo_bytes, jump_table_address_hi_bytes  {
 
   +_L_D_A_ addr_mode, operand
   tax
-    
+
   ; --- Method: self modifying code ---
 
   lda jump_table_address_lo_bytes,x
@@ -573,21 +587,21 @@
 
   asl
   tax
-  
+
   ; --- Method: self modifying code ---
-  
+
   lda jump_table_address,x
   sta ._j_+1
   lda jump_table_address+1,x
   sta ._j_+2
   ._j_
   jsr $0000
-    
+
 }
 !macro ON_GOSUB_LH_AREG jump_table_address_lo_bytes, jump_table_address_hi_bytes  {
 
   tax
-    
+
   ; --- Method: self modifying code ---
 
   lda jump_table_address_lo_bytes,x
@@ -604,16 +618,16 @@
   txa
   asl
   tax
-  
+
   ; --- Method: self modifying code ---
-  
+
   lda jump_table_address,x
   sta ._j_+1
   lda jump_table_address+1,x
   sta ._j_+2
   ._j_
   jsr $0000
-    
+
 }
 !macro ON_GOSUB_LH_XREG jump_table_address_lo_bytes, jump_table_address_hi_bytes  {
 
@@ -633,16 +647,16 @@
   tya
   asl
   tay
-  
+
   ; --- Method: self modifying code ---
-  
+
   lda jump_table_address,y
   sta ._j_+1
   lda jump_table_address+1,y
   sta ._j_+2
   ._j_
   jsr $0000
-    
+
 }
 !macro ON_GOSUB_LH_YREG jump_table_address_lo_bytes, jump_table_address_hi_bytes  {
 
@@ -668,57 +682,57 @@
   +_L_D_A_ addr_mode, operand
   asl
   tax
-  
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address+1,x
   pha
   lda jump_table_address,x
   pha
   rts
-    
+
 }
 !macro ON_GOTO_LH_VAR8 addr_mode, operand, jump_table_address_lo_bytes, jump_table_address_hi_bytes {
 
   +_L_D_A_ addr_mode, operand
   tax
- 
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address_hi_bytes,x
   pha
   lda jump_table_address_lo_bytes,x
   pha
   rts
-    
+
 }
 
 !macro ON_GOTO_AREG addr_mode, operand, jump_table_address {
 
   asl
   tax
-  
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address+1,x
   pha
   lda jump_table_address,x
   pha
   rts
-    
+
 }
 !macro ON_GOTO_LH_AREG addr_mode, operand, jump_table_address_lo_bytes, jump_table_address_hi_bytes {
 
   tax
- 
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address_hi_bytes,x
   pha
   lda jump_table_address_lo_bytes,x
   pha
   rts
-    
+
 }
 
 !macro ON_GOTO_XREG addr_mode, operand, jump_table_address {
@@ -726,26 +740,26 @@
   txa
   asl
   tax
-  
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address+1,x
   pha
   lda jump_table_address,x
   pha
   rts
-    
+
 }
 !macro ON_GOTO_LH_XREG addr_mode, operand, jump_table_address_lo_bytes, jump_table_address_hi_bytes {
 
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address_hi_bytes,x
   pha
   lda jump_table_address_lo_bytes,x
   pha
   rts
-    
+
 }
 
 !macro ON_GOTO_YREG addr_mode, operand, jump_table_address {
@@ -753,26 +767,26 @@
   tya
   asl
   tay
-  
+
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address+1,y
   pha
   lda jump_table_address,y
   pha
   rts
-    
+
 }
 !macro ON_GOTO_LH_YREG addr_mode, operand, jump_table_address_lo_bytes, jump_table_address_hi_bytes {
 
   ; --- Method: Wozniak's "rts" trick  ---
-  
+
   lda jump_table_address_hi_bytes,y
   pha
   lda jump_table_address_lo_bytes,y
   pha
   rts
-    
+
 }
 
 
