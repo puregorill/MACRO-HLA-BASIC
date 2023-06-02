@@ -9,7 +9,9 @@ The special feature of this macro collection is that it contains structure macro
 
 HLA means high level assembly. You can mix the HLA BASIC macros with 6502 assembly mnemonics.  
 
-But it is also possible - within limits - to program only with the HLA BASIC macros like in BASIC. It is a bit more inefficient, but of course much much faster than C64 BASIC. So if you know almost nothing about machine language, you can program MACRO HLA BASIC as if it were a kind of Tiny Basic (a limited and therefore somewhat cumbersome Basic that is very fast). However, with parts of machine language you get much more out of the macro collection and the use like Tiny Basic comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.
+But it is also possible - within limits - to program only with the HLA BASIC macros like in BASIC. It is a bit more inefficient, but of course much much faster than C64 BASIC. So if you know almost nothing about machine language, you can program MACRO HLA BASIC as if it were a kind of Tiny Basic (a limited and therefore somewhat cumbersome Basic that is very fast). However, with parts of machine language you get much more out of the macro collection and the use like Tiny Basic comes with the disadvantage that the code is much longer (and somewhat more cumbersome, because it is not a real high level BASIC) than C64 BASIC.  
+
+Should you want to dive into compiler construction, then looking at how these macros are implemented could possibly also be of use - possibly how to do it or how not to do it.  
 
 The whole project and also parts of the code are heavily influenced and inspired by the following project:  
 &emsp;http://wilsonminesco.com/StructureMacros/  
