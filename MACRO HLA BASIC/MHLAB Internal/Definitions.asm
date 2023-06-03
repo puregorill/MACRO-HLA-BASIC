@@ -30,7 +30,7 @@ AREG=-97
 XREG=-98
 YREG=-99
 
-NONE=-100 ; Do I need this?
+NONE=-100
 
 ;*********************************************************************
 ; Comparision Constants

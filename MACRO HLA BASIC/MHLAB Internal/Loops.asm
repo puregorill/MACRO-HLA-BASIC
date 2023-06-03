@@ -405,23 +405,23 @@
   }
   +_P_U_S_H_L_O_O_P_ *
 }
-!macro NEXT_X_DOWNTO_ZERO {
+!macro NEXT_UNTIL_X_DOWNTO_ZERO {
   dex
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_X_DOWNTO_MINUS {
+!macro NEXT_UNTIL_X_DOWNTO_MINUS {
   dex
   bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_X_DOWNTO end_addr_mode, end_operand {
+!macro NEXT_UNTIL_X_DOWNTO end_addr_mode, end_operand {
   dex
   +_C_P_X_ end_addr_mode, end_operand
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_X_UPTO end_addr_mode, end_operand {
+!macro NEXT_UNTIL_X_UPTO end_addr_mode, end_operand {
   inx
   +_C_P_X_ end_addr_mode, end_operand
   bne _L_O_O_P_L_V_L_1_
@@ -441,69 +441,69 @@
   }
   +_P_U_S_H_L_O_O_P_ *
 }
-!macro NEXT_Y_DOWNTO_ZERO {
+!macro NEXT_UNTIL_Y_DOWNTO_ZERO {
   dey
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_Y_DOWNTO_MINUS {
+!macro NEXT_UNTIL_Y_DOWNTO_MINUS {
   dey
   bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_Y_DOWNTO end_addr_mode, end_operand {
+!macro NEXT_UNTIL_Y_DOWNTO end_addr_mode, end_operand {
   dey
   +_C_P_Y_ end_addr_mode, end_operand
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXT_Y_UPTO end_addr_mode, end_operand {
+!macro NEXT_UNTIL_Y_UPTO end_addr_mode, end_operand {
   iny
   +_C_P_Y_ end_addr_mode, end_operand
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
 
-!macro NEXTFAR_X_DOWNTO_ZERO {
+!macro NEXTFAR_UNTIL_X_DOWNTO_ZERO {
   dex
   +JNE _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_X_DOWNTO_MINUS {
+!macro NEXTFAR_UNTIL_X_DOWNTO_MINUS {
   dex
   +JPL bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_X_DOWNTO end_addr_mode, end_operand {
+!macro NEXTFAR_UNTIL_X_DOWNTO end_addr_mode, end_operand {
   dex
   +_C_P_X_ end_addr_mode, end_operand
   +JNE _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_X_UPTO end_addr_mode, end_operand {
+!macro NEXTFAR_UNTIL_X_UPTO end_addr_mode, end_operand {
   inx
   +_C_P_X_ end_addr_mode, end_operand
   +JNE _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
 
-!macro NEXTFAR_Y_DOWNTO_ZERO {
+!macro NEXTFAR_UNTIL_Y_DOWNTO_ZERO {
   dey
   +JNE _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_Y_DOWNTO_MINUS {
+!macro NEXTFAR_UNTIL_Y_DOWNTO_MINUS {
   dey
   +JPL _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_Y_DOWNTO end_addr_mode, end_operand {
+!macro NEXTFAR_UNTIL_Y_DOWNTO end_addr_mode, end_operand {
   dey
   +_C_P_Y_ end_addr_mode, end_operand
   +JNE _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
-!macro NEXTFAR_Y_UPTO end_addr_mode, end_operand {
+!macro NEXTFAR_UNTIL_Y_UPTO end_addr_mode, end_operand {
   iny
   +_C_P_Y_ end_addr_mode, end_operand
   +JNE _L_O_O_P_L_V_L_1_
