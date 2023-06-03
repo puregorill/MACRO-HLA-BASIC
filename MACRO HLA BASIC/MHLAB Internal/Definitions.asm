@@ -100,10 +100,24 @@ CTRL_CurRight = 29
 CTRL_ClearScreen = 147
 CTRL_ShiftClrHome = CTRL_ClearScreen
 
+;*********************************************************************
+; C64 POKECOLORs
+;*********************************************************************
 
-
-
-
-
-
+POKECOLOR_Black = 0
+POKECOLOR_White = 1
+POKECOLOR_Red = 2
+POKECOLOR_Cyan = 3
+POKECOLOR_Purple = 4
+POKECOLOR_Green = 5
+POKECOLOR_Blue = 6
+POKECOLOR_Yellow = 7
+POKECOLOR_Orange = 8
+POKECOLOR_Brown = 9
+POKECOLOR_Light_Red = 10
+POKECOLOR_Dark_Grey = 11
+POKECOLOR_Grey = 12
+POKECOLOR_Light_Green = 13
+POKECOLOR_Light_Blue = 14
+POKECOLOR_Light_Grey = 15
 

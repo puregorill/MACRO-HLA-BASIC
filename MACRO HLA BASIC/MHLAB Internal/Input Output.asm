@@ -3,7 +3,7 @@
 ;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ;*********************************************************************
-; PRINT, SCREEN OUTPUT, SCREEN CONTROL
+; PRINT, SCREEN OUTPUT
 ;*********************************************************************
 
 !macro PRINTS string_addr_mode, string_address {
@@ -25,9 +25,6 @@
   lda #<string_address
   ldy #>string_address
   jsr STROUT0
-}
-!macro CLEAR_SCREEN {
-  jsr _C_L_R_S_C_R_
 }
 !macro PRINTCHR addr_mode, operand {
   +_L_D_A_ addr_mode, operand
@@ -95,10 +92,29 @@
   jsr INTOUT
 }
 
+;*********************************************************************
+; SCREEN CONTROL
+;*********************************************************************
+
 !macro LOCATE addr_mode_xpos, xpos, addr_mode_ypos, ypos {
   ; yes, it is swapped x=ypos and y=xpos
   +_L_D_X_ addr_mode_ypos, ypos
   +_L_D_Y_ addr_mode_xpos, xpos
   clc
   jsr _S_E_T_C_U_R_
+}
+!macro CLEAR_SCREEN {
+  jsr _C_L_R_S_C_R_
+}
+!macro POKE_PAPER_COLOR addr_mode, operand {
+  +_L_D_A_ addr_mode, operand
+  sta 53281
+}
+!macro POKE_BORDER_COLOR addr_mode, operand {
+  +_L_D_A_ addr_mode, operand
+  sta 53280
+}
+!macro POKE_INK_COLOR addr_mode, operand {
+  +_L_D_A_ addr_mode, operand
+  sta 646
 }
