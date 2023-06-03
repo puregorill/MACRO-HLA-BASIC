@@ -10,13 +10,13 @@
 ; LOOP HEADS
 ;*********************************************************************
 
-!macro REPEAT { ; ... UNTIL
+!macro REPEAT { ; ...UNTIL
   +_P_U_S_H_L_O_O_P_ *
 }
-!macro LOOP { ; ... ENDLOOP
+!macro LOOP {   ; ...ENDLOOP
   +REPEAT
 }
-!macro BLOCK { ; ... ENDBLOCK
+!macro BLOCK {  ; ...ENDBLOCK
   +REPEAT
 }
 
@@ -405,6 +405,7 @@
   }
   +_P_U_S_H_L_O_O_P_ *
 }
+
 !macro NEXT_UNTIL_X_DOWNTO_ZERO {
   dex
   bne _L_O_O_P_L_V_L_1_
@@ -434,52 +435,6 @@
 !macro NEXT_UNTIL_X_UPTO end_addr_mode, end_operand {
   inx
   +_C_P_X_ end_addr_mode, end_operand
-  bne _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-
-!macro FOR_Y start_addr_mode, start_operand {
-  !if start_addr_mode=YREG {
-    ; do nothing
-  } else if start_addr_mode=AREG {
-    tay
-  } else if start_addr_mode=XREG {
-    tax
-    tay
-  } else {
-    +_L_D_Y_ start_addr_mode, start_operand
-  }
-  +_P_U_S_H_L_O_O_P_ *
-}
-!macro NEXT_UNTIL_Y_DOWNTO_ZERO {
-  dey
-  bne _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-!macro NEXT_UNTIL_Y_DOWNTO_MINUS {
-  dey
-  bpl _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-!macro NEXT_UNTIL_Y_UPTO_ZERO {
-  iny
-  bne _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-!macro NEXT_UNTIL_Y_UPTO_MINUS {
-  iny
-  bpl _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-!macro NEXT_UNTIL_Y_DOWNTO end_addr_mode, end_operand {
-  dey
-  +_C_P_Y_ end_addr_mode, end_operand
-  bne _L_O_O_P_L_V_L_1_
-  +_P_O_P_L_O_O_P_
-}
-!macro NEXT_UNTIL_Y_UPTO end_addr_mode, end_operand {
-  iny
-  +_C_P_Y_ end_addr_mode, end_operand
   bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
@@ -514,6 +469,55 @@
   inx
   +_C_P_X_ end_addr_mode, end_operand
   +JNE _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+
+; -----------------------------
+
+!macro FOR_Y start_addr_mode, start_operand {
+  !if start_addr_mode=YREG {
+    ; do nothing
+  } else if start_addr_mode=AREG {
+    tay
+  } else if start_addr_mode=XREG {
+    tax
+    tay
+  } else {
+    +_L_D_Y_ start_addr_mode, start_operand
+  }
+  +_P_U_S_H_L_O_O_P_ *
+}
+
+!macro NEXT_UNTIL_Y_DOWNTO_ZERO {
+  dey
+  bne _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_DOWNTO_MINUS {
+  dey
+  bpl _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_UPTO_ZERO {
+  iny
+  bne _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_UPTO_MINUS {
+  iny
+  bpl _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_DOWNTO end_addr_mode, end_operand {
+  dey
+  +_C_P_Y_ end_addr_mode, end_operand
+  bne _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_UPTO end_addr_mode, end_operand {
+  iny
+  +_C_P_Y_ end_addr_mode, end_operand
+  bne _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
 
@@ -559,9 +563,7 @@
   +_P_U_S_H_L_O_O_P_ *
 }
 
-;*********************************************************************
-; NEXT_UNTIL_VAR8
-;*********************************************************************
+; -----------------------------
 
 !macro NEXT_UNTIL_VAR8_DOWNTO_ZERO loopvar_addr_mode, loopvar_operand {
   +_D_E_C_ loopvar_addr_mode, loopvar_operand
@@ -654,9 +656,7 @@
   +_P_U_S_H_L_O_O_P_ *
 }
 
-;*********************************************************************
-; NEXT_UNTIL_VAR16
-;*********************************************************************
+; -----------------------------
 
 !macro NEXT_UNTIL_VAR16_DOWNTO_ZERO loopvar_addr_mode, loopvar_operand {
   +DEC16 loopvar_addr_mode, loopvar_operand
