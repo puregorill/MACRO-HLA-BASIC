@@ -415,6 +415,16 @@
   bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
+!macro NEXT_UNTIL_X_UPTO_ZERO {
+  inx
+  bne _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_X_UPTO_MINUS {
+  inx
+  bpl _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
 !macro NEXT_UNTIL_X_DOWNTO end_addr_mode, end_operand {
   dex
   +_C_P_X_ end_addr_mode, end_operand
@@ -451,6 +461,16 @@
   bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
+!macro NEXT_UNTIL_Y_UPTO_ZERO {
+  iny
+  bne _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXT_UNTIL_Y_UPTO_MINUS {
+  iny
+  bpl _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
 !macro NEXT_UNTIL_Y_DOWNTO end_addr_mode, end_operand {
   dey
   +_C_P_Y_ end_addr_mode, end_operand
@@ -474,6 +494,16 @@
   +JPL bpl _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
+!macro NEXTFAR_UNTIL_X_UPTO_ZERO {
+  inx
+  +JNE _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXTFAR_UNTIL_X_UPTO_MINUS {
+  inx
+  +JPL bpl _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
 !macro NEXTFAR_UNTIL_X_DOWNTO end_addr_mode, end_operand {
   dex
   +_C_P_X_ end_addr_mode, end_operand
@@ -494,6 +524,16 @@
 }
 !macro NEXTFAR_UNTIL_Y_DOWNTO_MINUS {
   dey
+  +JPL _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXTFAR_UNTIL_Y_UPTO_ZERO {
+  iny
+  +JNE _L_O_O_P_L_V_L_1_
+  +_P_O_P_L_O_O_P_
+}
+!macro NEXTFAR_UNTIL_Y_UPTO_MINUS {
+  iny
   +JPL _L_O_O_P_L_V_L_1_
   +_P_O_P_L_O_O_P_
 }
