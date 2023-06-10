@@ -45,7 +45,7 @@
       lda #0
     } else if addr_mode=ABSX8 {
       lda operand,x
-      txa
+      tax
       lda #0
     } else if addr_mode=ABSY8 {
       ldx operand,y
@@ -69,10 +69,6 @@
     } else if addr_mode=ABS16 {
       ldx operand
       lda operand+1
-    } else if addr_mode=ABSX16 {
-      lda operand,x
-      txa
-      lda operand+1,x
     } else if addr_mode=ABSY16 {
       ldx operand,y
       lda operand+1,y
