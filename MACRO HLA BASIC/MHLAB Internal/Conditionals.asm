@@ -465,6 +465,16 @@
     +_P_O_P_I_F_I_S_F_A_R_
   !end
 }
+!macro ELSES number {
+  jmp $0000
+  !for ._i_=1 to number
+    +_E_N_D_I_F_
+    +_P_O_P_I_F_F_I_R_S_T_
+    +_P_O_P_I_F_S_E_C_O_N_D_
+    +_P_O_P_I_F_I_S_F_A_R_
+  !end
+  +_P_U_S_H_I_F_ *, 0, 1
+}
 
 ;*********************************************************************
 ; OR_TRUE, ENDOR

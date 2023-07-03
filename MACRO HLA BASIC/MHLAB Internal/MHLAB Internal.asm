@@ -9,4 +9,5 @@
 !source "Input Output.asm"
 !source "Conditionals.asm"
 !source "Loops.asm"
+!source "Graphic.asm"
 !source "Internal Debugging.asm"
