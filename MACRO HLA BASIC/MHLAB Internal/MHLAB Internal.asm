@@ -14,5 +14,7 @@
 !source "Internal Debugging.asm"
 
 
+; TODO LIST:
+
   ;; ----- cmp #0 vermeiden -------------------------------------------
-  ;; in _C_M_P_ am bestehn und _C_M_P_H_I_
+  ;; change in _C_M_P_, _C_M_P_H_I_

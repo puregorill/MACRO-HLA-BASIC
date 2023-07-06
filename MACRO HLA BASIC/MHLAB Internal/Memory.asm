@@ -51,7 +51,6 @@
 
 }
 
-
 !macro MEMORYCONFIG memoryconfig, use_register, set_interrupt {
 
   !if memoryconfig<>MEMORYCONFIG_DEFAULT_BASIC_IO_KERNAL & set_interrupt=1 {
@@ -103,6 +102,6 @@ MEMORYCONFIG_DEFAULT_BASIC_IO_KERNAL=$37 ; $37 +55 %111     BASIC        I/O    
 ;---------------------------------------------------------------------
 
 ;---------------------------------------------------------------------
-; "set_interrupt": 1 = use "sei", "sei", 0 = don't
+; "set_interrupt": 1 = use "sei...cli", 0 = don't
 ;---------------------------------------------------------------------
 
