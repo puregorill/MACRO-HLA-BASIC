@@ -297,7 +297,7 @@
   +OR_A_HI addr_mode, operand
   +IF_FLAG_ZERO_CLEAR
 }
-!macro IF_VAR16 addr_mode0, operand0, condition, addr_mode1, operand1 {
+!macro _I_F_V_A_R_1_6_ addr_mode0, operand0, condition, addr_mode1, operand1 {
 
   ._s_c_n_d_=0
 
@@ -352,6 +352,9 @@
   }
   +_P_U_S_H_I_F_ ._f_r_s_t_,._s_c_n_d_,0
 }
+!macro IF_VAR16 addr_mode0, operand0, condition, addr_mode1, operand1 {
+ +_I_F_V_A_R_1_6_ addr_mode0, operand0, condition, addr_mode1, operand1
+}
 
 !macro IFFAR_VAR16_IS_ZERO addr_mode, operand {
   +_L_D_A_ addr_mode, operand
@@ -363,7 +366,7 @@
   +OR_A addr_mode, operand+1
   +IFFAR_FLAG_ZERO_CLEAR
 }
-!macro IFFAR_VAR16 addr_mode0, operand0, condition, addr_mode1, operand1 {
+!macro _I_F_F_A_R_V_A_R_1_6_ addr_mode0, operand0, condition, addr_mode1, operand1 {
 
   ._s_c_n_d_=0
 
@@ -420,6 +423,9 @@
   }
 
   +_P_U_S_H_I_F_ ._f_r_s_t_,._s_c_n_d_,1
+}
+!macro IFFAR_VAR16 addr_mode0, operand0, condition, addr_mode1, operand1 {
+  +_I_F_F_A_R_V_A_R_1_6_ addr_mode0, operand0, condition, addr_mode1, operand1
 }
 
 ;*********************************************************************
@@ -492,13 +498,15 @@
 ;*********************************************************************
 
 ; BROKEN --- DOES NOT WORK
-
+!macro BEGINORS {
+  ; dummy
+}
 !macro ENDORS number {
-  jmp ._l_
+  jmp +
   +ENDIFS number
   jmp $0000
-  +  +_P_U_S_H_I_F_ *,0,1
-  ._l_
+  +
+  +_P_U_S_H_I_F_ *, 0, 1
 }
 
 ;XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
