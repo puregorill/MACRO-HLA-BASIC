@@ -34,6 +34,9 @@ _T_M_P_0_=0 ; Values to avoid autocomplete with local labels
 _T_M_P_1_=0
 _T_M_P_2_=0
 
+IGNORE = -99999999999
+TRUE=1
+FALSE=0
 
 ;*********************************************************************
 ; RAM positions

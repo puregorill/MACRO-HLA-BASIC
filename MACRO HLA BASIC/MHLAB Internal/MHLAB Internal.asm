@@ -16,5 +16,4 @@
 
 ; TODO LIST:
 
-  ;; ----- cmp #0 vermeiden -------------------------------------------
-  ;; change in _C_M_P_, _C_M_P_H_I_
+; avoid cmp #0 --> change in _C_M_P_, _C_M_P_H_I_
